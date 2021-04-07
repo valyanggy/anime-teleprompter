@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(grey, white);
+background-repeat: no-repeat;
+box-sizing: border-box;
+margin: 2em;
+/* min-height: 100vh; */
+  padding: 20px;
+}
+
+.panel{
+  display: flex;
+  flex-flow: column wrap;
+
+    justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: white;
+/*   border: solid 0.1em black; */
+  border-radius: 9.5em;
+  box-sizing: border-box;
+/*   flex: 0 0 30%; */
+  height: 20vh;
+  width: 60%;
+  margin: 1.5em;
+  overflow: auto;
+}
+
+
+.scrollbox {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* display: flex;
+  overflow: auto; */
+  /* flex: none; */
+  flex-flow: column nowrap;
+  scroll-snap-type: y mandatory;
+
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  margin: 0.15em;
+  /* padding-top: 0.3em; */
+  text-align: center;
+  font-size: 3em;
+  height: 100%;
+  scroll-snap-align: start;
+}
+
+/* for the inner shadow(not working yet): */
+#bracket {
+  overflow: hidden;
+  position: relative;
+
+}
+#bracket .scrollbox {
+  height: 100%;
+  overflow: auto;
+
+
+}
+#bracket .shadow {
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 0.2s ease-out;
+}
+#bracket.off-top .shadow-top {
+  box-shadow: 0 1em 1em -1em black inset;
+}
+#bracket.off-bottom .shadow-bottom {
+  box-shadow: 0 -1em 1em -1em black inset;
+}
