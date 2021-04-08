@@ -49,12 +49,10 @@ margin: 2em;
   justify-content: center;
   flex-direction: column;
   background-color: white;
-  margin: 0.15em;
-  /* padding-top: 0.3em; */
   text-align: center;
   font-size: 3em;
   height: 100%;
-  scroll-snap-align: start;
+  white-space: nowrap;
 }
 
 /* for the inner shadow(not working yet): */
