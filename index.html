@@ -8,68 +8,45 @@
     <title>Anime Teleprompter-Slot Machine</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css" />
-    <script src="lib/airtable.browser.js" defer></script>
-    <script src="lib/main.js" defer></script>
-    <script src="lib/shadow.js" defer></script>
-    <script src="lib/slot.js"></script>
 </head>
 
 <body>
-    <div id="title">Semantics Slot Machine</div>
+  <div id="title">Semantics Slot Machine</div>
 
-    <div class="panel">
-        <div id="bracket" class="container off-bottom">
-            <div class="scrollbox top">
-            </div>
-            <div class="shadow shadow-top" aria-hidden="true"></div>
-            <div class="shadow shadow-bottom" aria-hidden="true"></div>
-        </div>
-
-        <div id="bracket" class="container off-bottom">
-            <div class="scrollbox middle">
-      
-            </div>
-            <div class="shadow shadow-top" aria-hidden="true"></div>
-            <div class="shadow shadow-bottom" aria-hidden="true"></div>
-        </div>
-        <div id="bracket" class="container off-bottom">
-            <div class="scrollbox buttom">
-
-            </div>
-            <div class="shadow shadow-top" aria-hidden="true"></div>
-            <div class="shadow shadow-bottom" aria-hidden="true"></div>
-        </div>
+  <div class="panel">
+    <div id="bracket" class="container off-bottom">
+      <div class="scrollbox top"></div>
+      <div class="shadow shadow-top" aria-hidden="true"></div>
+      <div class="shadow shadow-bottom" aria-hidden="true"></div>
     </div>
+
+    <div id="bracket" class="container off-bottom">
+      <div class="scrollbox middle"></div>
+      <div class="shadow shadow-top" aria-hidden="true"></div>
+      <div class="shadow shadow-bottom" aria-hidden="true"></div>
+    </div>
+    <div id="bracket" class="container off-bottom">
+      <div class="scrollbox buttom"></div>
+      <div class="shadow shadow-top" aria-hidden="true"></div>
+      <div class="shadow shadow-bottom" aria-hidden="true"></div>
+    </div>
+  </div>
 
 
     <div id="output"></div>
 
 
     <div id="controls">
-        <button type="button" iclass="btn btn-primary" onclick="spin()">Spin</button>
+        <button type="button" class="btn btn-primary" id="randomizeButton">Spin</button>
     </div>
 
 
-    <div id="message">You've found the original line.</div>
+    <div id="message">You&rsquo;ve found the original line.</div>
 
-
-
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.0/howler.min.js" crossorigin="anonymous"></script>
-
-
+    <script src="lib/airtable.browser.js"></script>
+    <script src="lib/slotmachine.min.js"></script>
+    <!-- <script src="lib/shadow.js"></script> -->
+    <script src="lib/main.js"></script>
 </body>
 
 </html>
