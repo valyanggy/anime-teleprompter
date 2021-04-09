@@ -6,17 +6,46 @@ body {
   background-image: linear-gradient(grey, white);
 background-repeat: no-repeat;
 box-sizing: border-box;
-margin: 2em;
+/* margin: 2em; */
 /* min-height: 100vh; */
   padding: 20px;
+
+
+  overflow-y:hidden;
+  overflow-x:scroll;
+
+
+
 }
+
+.title{
+  /* transform: rotate(90deg); */
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  left:0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+top: 0;
+
+max-width: 20vh;
+z-index: 1;
+}
+
+/* .left{
+  transform: rotate(90deg);
+} */
 
 .panel{
   display: flex;
   flex-flow: column wrap;
-
-    justify-content: center;
+  justify-content: center;
   align-items: center;
+  border: 1px solid black;
+
 }
 
 .container {
@@ -29,6 +58,9 @@ margin: 2em;
   width: 60%;
   margin: 1.5em;
   overflow: auto;
+
+
+
 }
 
 
@@ -49,18 +81,20 @@ margin: 2em;
   justify-content: center;
   flex-direction: column;
   background-color: white;
-  margin: 0.15em;
+  /* margin: 0.15em; */
   /* padding-top: 0.3em; */
   text-align: center;
   font-size: 3em;
   height: 100%;
   scroll-snap-align: start;
+  /* white-space: nowrap; */
 }
 
 /* for the inner shadow(not working yet): */
 #bracket {
   overflow: hidden;
   position: relative;
+  
 
 }
 #bracket .scrollbox {
@@ -83,4 +117,84 @@ margin: 2em;
 }
 #bracket.off-bottom .shadow-bottom {
   box-shadow: 0 -1em 1em -1em black inset;
+}
+
+
+/* for the image gallery: */
+.block{
+position:absolute;
+/* max-width:100%; */
+height: 20vh;
+margin:0;
+padding:0;
+/* top:5vh; */
+
+overflow:hidden;
+z-index: -1;
+
+}
+
+.image{
+  position:relative;
+  height:95%;
+  /* maybe engage calculation of portion here: */
+  width:1.5%;
+  object-fit:cover;
+  transition: width 1s, filter 1s;
+  transition-timing-function: ease-out;
+  overflow:hidden;
+  margin-left:-5px;
+  padding:0px;
+  filter:grayscale(95%);
+}
+
+.image:hover{
+  width:22vh;
+  /* height:100%; */
+  filter:grayscale(0%)
+}
+
+/* .image:active{
+  width:80%;
+  height:100%;
+  filter:grayscale(0%)
+} */
+
+
+.fmab{
+  font-family: Bangla MN;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2rem;
+  
+  text-align: center;
+  letter-spacing: -0.05em;
+  line-height: 4rem;
+  color: #ebdbb0;
+  -webkit-text-stroke: 1.5px  #463131;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.9);
+}
+
+.ac{
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 4rem;
+  text-align: center;
+  color: #FFFFFF;
+  -webkit-text-stroke: 1.8px  #000000;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.9);
+}
+
+.jk{
+  font-family: 'Aleo', serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 4rem;
+  text-align: center;
+  color: #FFFFFF;
+  -webkit-text-stroke: 2px  #000000;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 1);
 }
